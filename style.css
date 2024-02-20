@@ -1,0 +1,122 @@
+:root {
+  /* colors */
+  /* primary */
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  /* neutral */
+  --transparentWhite: hsla(0, 0%, 100%, 0.7); /* paragraphs */
+  --veryLightGray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: bisque; */
+  color: var(--transparentWhite);
+  width: 100%;
+  height: 100%;
+  padding: 1em 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: salmon;
+  width: 275px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card {
+  padding: 2em;
+}
+
+.card-container .card:nth-child(1) {
+  background-color: var(--brightOrange);
+}
+.card-container .card:nth-child(2) {
+  background-color: var(--darkCyan);
+}
+.card-container .card:nth-child(3) {
+  background-color: var(--Verydarkcyan);
+}
+.title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.info {
+  width: 200px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.info,
+.title {
+  margin: 1em 0;
+}
+
+.btn {
+  width: 100px;
+  height: 29px;
+  margin: 1em 0;
+  border: none;
+  border-radius: 50px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.card-container .card:nth-child(1) .btn {
+  color: var(--brightOrange);
+}
+.card-container .card:nth-child(2) .btn {
+  color: var(--darkCyan);
+}
+.card-container .card:nth-child(3) .btn {
+  color: var(--Verydarkcyan);
+}
+
+/* desktop styles */
+
+@media only screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    width: auto;
+  }
+  .card-container {
+    display: flex;
+  }
+  .card {
+    width: 250px;
+  }
+  .btn {
+    margin-top: 4em;
+  }
+
+  .card-container .card:nth-child(1) .btn:hover {
+    background-color: var(--brightOrange);
+    color: var(--veryLightGray);
+    border: 2px solid var(--veryLightGray);
+  }
+  .card-container .card:nth-child(2) .btn:hover {
+    background-color: var(--darkCyan);
+    color: var(--veryLightGray);
+    border: 2px solid var(--veryLightGray);
+  }
+  .card-container .card:nth-child(3) .btn:hover {
+    background-color: var(--Verydarkcyan);
+    color: var(--veryLightGray);
+    border: 2px solid var(--veryLightGray);
+  }
+}
